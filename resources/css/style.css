@@ -1,0 +1,105 @@
+/* Global styles */
+
+html{
+   font-size: 16px;
+   font-family: 'Lato', sans-serif;
+}
+
+.container{
+  padding: 2rem 1.5rem;
+  display: flex;
+}
+
+main .container:nth-child(odd){
+  background-color: hsl(0, 0%, 89%);
+}
+
+.container img {
+  width: 60%;
+  height:auto;
+  margin:auto 0;
+}
+
+h1{
+
+}
+
+h2{
+
+}
+
+/* Header */
+
+header{
+  display: flex;
+  height:4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img{
+  height: 3rem;
+  width:auto;
+}
+
+.header-left{
+  display: flex;
+  align-items:center;
+  font-size:2rem;
+  margin-left:1.5rem;
+}
+
+header .desktop{
+  margin-right: 0.5rem;
+}
+
+header li{
+  display: inline;
+  margin-right: 1rem;
+  color: grey;
+}
+
+
+
+header .mobile{
+
+}
+
+@media only screen and (max-width: 700px)  {
+  header .desktop{
+    display:none;
+  }
+}
+
+@media only screen and (min-width: 700px)  {
+  header .mobile{
+    display:none;
+  }
+}
+
+/* Banner */
+
+.banner-text{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.banner-text h1, .banner-text h2, .banner-text span{
+  margin: 1rem 0;
+}
+
+.banner span{
+  background-color: darkgrey;
+  padding: 0.5rem 0;
+  text-align: center;
+  color: white;
+}
+
+/* Main info */
+
+.main-info img{
+  width: 60%;
+  border: solid 1px red;
+}
