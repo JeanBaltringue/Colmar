@@ -19,7 +19,7 @@ h1{
 
 h2{
   font-size: 1.25em;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 p{
@@ -30,6 +30,11 @@ a{
   text-decoration: none;
 }
 
+/* Section general styles */
+
+main .section:nth-child(odd){
+  background-color: hsl(64, 9%, 90%);
+}
 
 .section{
   width: 100%;
@@ -41,11 +46,7 @@ a{
 .container{
   padding: 2rem 0;
   display: flex;
-  max-width: 1260px;
-}
-
-main .section:nth-child(odd){
-  background-color: hsl(64, 9%, 90%);
+  max-width: 1260px; /*--> this has been implemented in order to have a better a layout of the global content on wide screen and in particularly for the rendering of the pictures in the 2nd & 3rd section (where resolution isn't sufficient for expanding to wide screens)*/
 }
 
 .container-left{
@@ -66,107 +67,149 @@ main .section:nth-child(odd){
   width: 40%;
 }
 
-.container-right img{
-  width:35%;
-  height: auto;
-}
-
-.container-right .text-box{
-  width: 65%;
-}
-
 .infobox{
   display: flex;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1rem 0;
+}
+
+.infobox img{
+  width:35%;
+  margin: 0 1rem;
 }
 
 .text-box{
+  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 1rem;
 }
 
 .text-box p{
   margin: 0.5rem 0;
 }
 
+main{
+  padding-top:4rem;
+}
+
 /* Header */
 
 header{
-  display: flex;
-  height:4rem;
-  justify-content: space-between;
-  align-items: center;
+  height: 4rem;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
 }
 
 header img{
-  height: 3rem;
+  height: 3rem; /*-> not in specs*/
   width:auto;
 }
 
-.header-left{
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem 0 1.5rem;
+  height: 100%;
+}
+
+    /*---Header desktop---*/
+.logo{
   display: flex;
   align-items:center;
   font-size:1.25rem;
-  margin-left:1.5rem;
   letter-spacing: 0.04rem;
 }
 
-.header-left p:nth-child(2n+2){
+.logo p:nth-child(2n+2){
   color: hsl(60, 2%, 30%);
   font-weight:bold;
 }
 
-header .desktop{
-  margin-right: 0.5rem;
-}
-
-header li{
+header .desktop li{
   display: inline;
   margin-right: 1rem;
   color: hsl(60, 2%, 30%);
 }
 
-header a{
+header .desktop a{
   color: hsl(60, 2%, 30%);
 }
 
-@media only screen and (max-width: 700px)  {
-   .desktop{
-    display:none;
-  }
+header .desktop a:active{
+  color: hsl(349, 67%, 46%);
 }
 
-@media only screen and (min-width: 700px)  {
-   .mobile{
-    display:none;
+    /*---Header mobile---*/
+
+header .mobile{
+  padding: 0.5rem 1.5rem 0 1.5rem;
   }
-}
 
 /* Banner */
+
+    /*---Banner desktop---*/
 
 .banner .container-right{
   justify-content: center;
 }
 
-.banner .container-right  h2{
+.banner .container-right h2{
   margin: 2rem 0;
 }
 
-.banner .container-right span{
+.banner .container-right a{
   background-color:hsl(60, 2%, 30%);
   padding: 0.5rem 0;
   text-align: center;
-  width: 80%;
+  color: white;
+  transition: color 0.25s linear;
 }
 
-.banner a{
-  color: white;
+.banner .container-right a:hover{
+  color: hsl(349, 67%, 46%);
+}
+
+    /*---Banner mobile---*/
+
+@media only screen and (max-width: 700px)  {
+  .banner .container{
+    flex-direction: column;
+    padding: 0;
+  }
+  .banner .container-left{
+    width:100%;
+    margin:0;
+  }
+  .banner .container-right{
+    width: 100%;
+  }
+  .banner .container-right h1{
+    margin: 2rem 1rem;;
+  }
+  .banner .container-right h2{
+    margin: 0 1rem 1.5rem 1rem;
+  }
+  .banner .container-right a{
+    background-color:hsl(60, 2%, 60%);
+    margin:0 1rem 2rem 1rem;
+  }
 }
 
 /* Main info Section*/
+
+.text-box a{
+  color: hsl(203, 62%, 55%);
+}
+
+.text-box a:visited{
+  color: hsl(266, 29%, 44%);
+}
+
+    /*---Main info desktop---*/
 
 .main-info .container-left h1{
   margin: 2rem 0 1.5rem 0;
@@ -181,32 +224,71 @@ header a{
   color: hsl(60, 2%, 40%);
 }
 
-.main-info .container-right{
-  justify-content: flex-start;
-}
-
 .main-info .container-right .infobox:first-child{
   padding-top: 0; /*-> as shown in specs*/
 }
 
-.main-info .container-right .infobox:last-child{
-  background-color: hsl(64, 9%, 90%);
+@media only screen and (min-width: 700px){
+  .mobile{
+    display: none;
+  }
+  .main-info .container-right .infobox:last-child{
+    background-color: hsl(64, 9%, 90%);
+  }
 }
 
-.main-info a{
-  color: hsl(203, 62%, 55%);
+    /*---Main info mobile---*/
+
+@media only screen and (max-width: 700px){
+  .desktop{
+    display: none;
   }
 
+  .main-info .container{
+    padding:0;
+  }
+
+  .main-info .container-right{
+    width:100%;
+    margin:1rem;
+  }
+
+  .infobox{
+    padding: 0;
+    width:100%;
+    flex-direction: column;
+    background-color: none;
+    margin-bottom: 4rem;
+  }
+
+  .main-info .container-right .infobox:last-child{
+      margin-bottom: 2rem;
+  }
+
+  .infobox img{
+    width:100%;
+  }
+  .text-box{
+    width:100%;
+    margin-top: 4rem;
+  }
+  .text-box h2, .text-box p, .text-box a{
+    margin-left: 1rem;
+  }
+}
+
 /* Start learning Section*/
+
+.learning-box h1{
+  text-align: center;
+}
 
 .learning-box .container{
   flex-direction:column;
   align-items: center;
 }
 
-.learning-box h1{
-  text-align: center;
-}
+    /*---Start learning desktop--- */
 
 .box-line{
   display: flex;
@@ -242,6 +324,33 @@ header a{
   padding: 0.5rem 0;
 }
 
+    /*---Start learning mobile---*/
+
+.learning-box .mobile{
+  width: 100%;
+  background-color: hsl(0,0%,100%);
+  padding: 2rem 1rem;
+}
+
+.learning-box .mobile h1{
+  margin-bottom:1rem;
+}
+
+.learning-box .mobile h2{
+  width: 100%;
+  margin-top: 0.5rem;
+  background-color: hsl(64, 9%, 90%);
+  padding: 1rem 0 1.5rem 1rem;
+}
+
+@media only screen and (max-width: 700px){
+  .learning-box{
+    border-top: solid 1px hsl(64, 9%, 90%);
+    border-bottom: solid 1px hsl(64, 9%, 90%);
+  }
+}
+
+
 /* Thesis Section*/
 
 .thesis .container{
@@ -251,6 +360,12 @@ header a{
 .thesis h1{
   text-align: center;
 }
+
+video{
+  width: 100%;
+}
+
+    /*---Thesis desktop---*/
 
 .sub-container{
   width:100%;
@@ -270,8 +385,20 @@ header a{
 background-color: hsl(64, 9%, 90%);
 }
 
-video{
-  width: 100%;
+    /*---Thesis mobile---*/
+
+@media only screen and (max-width: 700px){
+  .thesis .container{
+    padding-bottom: 1.5rem;
+  }
+
+  .thesis .container-left{
+    width:100%;
+    margin:0;
+  }
+  .sub-container{
+    margin-top: 1rem;
+  }
 }
 
 /* Footer*/
@@ -290,4 +417,16 @@ margin: 0 0.5rem;
 
 footer a{
   color:hsl(64, 9%, 45%);
+}
+
+footer a:hover{
+  color: hsl(266, 29%, 44%);
+}
+
+@media only screen and (max-width: 700px){
+  footer{
+    color: hsl(60, 2%, 30%);
+    padding: 1rem 1.5rem;
+    border-top: none;
+  }
 }

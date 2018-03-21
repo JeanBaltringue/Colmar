@@ -10,27 +10,27 @@
 
     <!-- Header -->
     <header>
-      <div class="header-left">
-        <img src="./resources/image/ic-logo.svg" alt="Logo">
-        <p>COLMAR</p>
-        <p>ACADEMY</p>
+      <div class="header desktop">
+        <div class="logo">
+          <img src="./resources/image/ic-logo-reworked.svg" alt="Logo"> <!-- this image has been re-worked on photoshop because there was some blank space below the icon (that I cutted) which prevented the logo to be properly centered in the header & aligned with the text -->
+          <p>COLMAR</p>
+          <p>ACADEMY</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">On campus</a></li>
+            <li><a href="#">Online</a></li>
+            <li><a href="#">For companies</a></li>
+            <li><a href="#">Sign in</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="desktop">
-        <ul>
-          <li><a href="#">On campus</a></li>
-          <li><a href="#">Online</a></li>
-          <li><a href="#">For companies</a></li>
-          <li><a href="#">Sign in</a></li>
-        </ul>
-      </nav>
-      <nav class="mobile">
-        <ul>
-          <li><a href="#"><img src="./resources/image/ic-logo.svg"></a></li>
-          <li><a href="#"><img src="./resources/image/ic-on-campus.svg"></a></li>
-          <li><a href="#"><img src="./resources/image/ic-online.svg"></a></li>
-          <li><a href="#"><img src="./resources/image/ic-login.svg"></a></li>
-        </ul>
-      </nav>
+      <div class="header mobile">
+        <a href="#"><img src="./resources/image/ic-logo.svg"></a>
+        <a href="#"><img src="./resources/image/ic-on-campus.svg"></a>
+        <a href="#"><img src="./resources/image/ic-online.svg"></a>
+        <a href="#"><img src="./resources/image/ic-login.svg"></a>
+      </div>
     </header>
 
     <main>
@@ -43,15 +43,19 @@
         <div class="container-right">
           <h1>Learn something </br>new everyday</h1>
           <h2>Lorem ipsum dolor sit amet, </br>consectetur adipiscing elit.</h2>
-          <span><a href="#">Start here</a></span>
+          <a href="#"><span>Start here</span></a>
         </div>
       </div>
     </div>
 
     <!--Main info section -->
+      <!--PLEASE NOTICE: in the below section, I didn't find a way to match properly the specs.
+      Indeed, the top & bottom borders of the big picture on the left are supposed to match with the top border of 1st picture and the bottom border of the 2nd picture on the right.
+      I didn't find out how to have this layout considering the specs of the pictures -> 60% width of its container (+height auto scaled) for the big picture on the left + 35% of its container (+height auto scaled) for the little pictures on the right
+    -->
     <div class="main-info section">
       <div class="container">
-        <div class="container-left">
+        <div class="container-left desktop">
           <img src="./resources/image/information-main.jpg" alt="Student reading outside">
           <h1>It doesn't hurt to keep practicing</h1>
           <p>"Curibatur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat nece. Sed non accumsam urna. Phasellus sed consequam ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
@@ -91,7 +95,7 @@
 
     <!--Start Learning section -->
     <div class="learning-box section">
-      <div class="container">
+      <div class="container desktop">
         <h1>Start learning</h1>
         <div class="box-line">
           <div class="box">
@@ -134,6 +138,15 @@
           </div>
         </div>
       </div>
+      <div class="container mobile">
+        <h1>Start learning</h1>
+        <h2>Software engineering</h2>
+        <h2>Computer art</h2>
+        <h2>Design</h2>
+        <h2>Data</h2>
+        <h2>Business</h2>
+        <h2>Marketing</h2>
+      </div>
     </div>
 
     <!--Thesis section -->
@@ -142,13 +155,13 @@
         <h1>Thesis exhibit</h1>
         <div class="sub-container">
           <div class="container-left">
-            <video>
+            <video autoplay muted loop>
               <source src="resources/video/thesis.mp4" type="video/mp4">Video not supported
             </video>
-            <h2>Reimagine urban</h2>
-            <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Se non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
+            <h2 class="desktop">Reimagine urban</h2>
+            <p class="desktop">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Se non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
           </div>
-          <div class="container-right">
+          <div class="container-right desktop">
             <div class="infobox">
               <img src="./resources/image/thesis-fisma.jpg" alt="Person taking notes">
               <div class="text-box">
@@ -175,7 +188,7 @@
       <div class="footer-left">
         <span>&#xA9; 2016 Colmar Academy. All rights reserved</span>
       </div>
-      <div class="footer-right">
+      <div class="footer-right desktop">
         <span><a href="#">Terms</a></span>
         <span><a href="#">Privacy</a></span>
       </div>
