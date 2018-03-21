@@ -2,22 +2,50 @@
 
 html{
    font-size: 16px;
-   font-family: 'Lato', sans-serif;
+   font-family: 'Palanquin', sans-serif;
+   color:hsl(64, 9%, 45%);
+}
+
+h1, h2{
+  font-family: 'Open Sans', sans-serif;
+  font-weight:bold;
+  color: hsl(60, 2%, 30%);
 }
 
 h1{
+  font-size: 2.25rem;
+  line-height: 1.2;
 }
 
 h2{
+  font-size: 1.25em;
+  line-height: 1.6;
+}
+
+p{
+  line-height: 1.5;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+.section{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container{
   padding: 2rem 0;
   display: flex;
+  max-width: 1260px;
 }
 
-main .container:nth-child(odd){
-  background-color: hsl(0, 0%, 89%);
+main .section:nth-child(odd){
+  background-color: hsl(64, 9%, 90%);
 }
 
 .container-left{
@@ -29,12 +57,39 @@ main .container:nth-child(odd){
 
 .container-left img{
   width:100%;
+  height: auto;
 }
 
 .container-right{
   display:flex;
   flex-direction:column;
   width: 40%;
+}
+
+.container-right img{
+  width:35%;
+  height: auto;
+}
+
+.container-right .text-box{
+  width: 65%;
+}
+
+.infobox{
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+.text-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.text-box p{
+  margin: 0.5rem 0;
 }
 
 /* Header */
@@ -54,8 +109,14 @@ header img{
 .header-left{
   display: flex;
   align-items:center;
-  font-size:2rem;
+  font-size:1.25rem;
   margin-left:1.5rem;
+  letter-spacing: 0.04rem;
+}
+
+.header-left p:nth-child(2n+2){
+  color: hsl(60, 2%, 30%);
+  font-weight:bold;
 }
 
 header .desktop{
@@ -65,7 +126,11 @@ header .desktop{
 header li{
   display: inline;
   margin-right: 1rem;
-  color: grey;
+  color: hsl(60, 2%, 30%);
+}
+
+header a{
+  color: hsl(60, 2%, 30%);
 }
 
 @media only screen and (max-width: 700px)  {
@@ -91,56 +156,51 @@ header li{
 }
 
 .banner .container-right span{
-  background-color: darkgrey;
+  background-color:hsl(60, 2%, 30%);
   padding: 0.5rem 0;
   text-align: center;
-  color: white;
+  width: 80%;
 }
 
+.banner a{
+  color: white;
+}
 
 /* Main info Section*/
 
 .main-info .container-left h1{
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  margin: 2rem 0 1.5rem 0;
 }
 
 .main-info .container-left p{
   margin-bottom: 2.5em;
 }
 
+.main-info .container-left span{
+  font-size: 0.75rem;
+  color: hsl(60, 2%, 40%);
+}
+
 .main-info .container-right{
   justify-content: flex-start;
 }
 
-.infobox{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 1rem 1rem;
+.main-info .container-right .infobox:first-child{
+  padding-top: 0; /*-> as shown in specs*/
 }
 
-.container-right .infobox:last-child{
-  background-color: hsl(0, 0%, 89%);
+.main-info .container-right .infobox:last-child{
+  background-color: hsl(64, 9%, 90%);
 }
 
-.text-box{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 1rem;
-}
-
-.text-box p{
-  margin: 0.5rem 0;
-}
+.main-info a{
+  color: hsl(203, 62%, 55%);
+  }
 
 /* Start learning Section*/
 
-.learning-box{
+.learning-box .container{
   flex-direction:column;
-  padding-right:4.5rem;
-  padding-left: 4.5rem;
   align-items: center;
 }
 
@@ -149,9 +209,9 @@ header li{
 }
 
 .box-line{
-  margin-top: 2rem;
   display: flex;
   justify-content: center;
+  margin: 2rem 4.5rem 0 4.5rem;
 }
 
 .box-line .box:nth-child(2n+0){
@@ -159,7 +219,7 @@ header li{
 }
 
 .box{
-  max-width: 400px; /*-> this rule has been applied for displaying correctly the images on wide screen (otherwise it would pixelise and show an unpleasant layout)*/
+  width: 27.8%;
   display:flex;
   flex-direction: column;
   background-color: white;
@@ -168,7 +228,6 @@ header li{
 
 .box img{
   width:100%;
-  height: auto;
 }
 
 .box h2, .box h3, .box p{
@@ -185,28 +244,50 @@ header li{
 
 /* Thesis Section*/
 
-.thesis{
+.thesis .container{
   flex-direction: column;
-  border: solid 1px red;
-  align-items: center;
 }
 
 .thesis h1{
-  text-align:center;
+  text-align: center;
 }
 
 .sub-container{
   width:100%;
   margin-top: 2rem;
   display:flex;
-  border: solid 1px red;
 }
 
-.sub-container .container-left{
+.thesis .container-left{
   justify-content: flex-start;
-  border: solid 1px red;
+}
+
+.thesis .container-left h2{
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.thesis .container-right .infobox:first-child{
+background-color: hsl(64, 9%, 90%);
 }
 
 video{
-  margin:0;
+  width: 100%;
+}
+
+/* Footer*/
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 3rem 1.5rem;
+  border-top: solid 1px hsl(64, 9%, 90%);
+  font-size: 0.75rem;
+}
+
+.footer-right span{
+margin: 0 0.5rem;
+}
+
+footer a{
+  color:hsl(64, 9%, 45%);
 }
