@@ -175,7 +175,7 @@ header .mobile{
 
     /*---Banner mobile---*/
 
-@media only screen and (max-width: 900px)  {
+@media only screen and (max-width: 980px)  {
   .banner .container{
     flex-direction: column;
     padding: 0;
@@ -228,7 +228,7 @@ header .mobile{
   padding-top: 0; /*-> as shown in specs*/
 }
 
-@media only screen and (min-width: 900px){
+@media only screen and (min-width: 980px){
   .main-info .container-right .infobox:last-child{
     background-color: hsl(64, 9%, 90%);
   }
@@ -236,7 +236,7 @@ header .mobile{
 
     /*---Main info mobile---*/
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 980px){
   .main-info .container{
     padding:0;
   }
@@ -336,7 +336,7 @@ header .mobile{
   padding: 1rem 0 1.5rem 1rem;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 980px){
   .learning-box{
     border-top: solid 1px hsl(64, 9%, 90%);
     border-bottom: solid 1px hsl(64, 9%, 90%);
@@ -380,7 +380,7 @@ background-color: hsl(64, 9%, 90%);
 
     /*---Thesis mobile---*/
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 980px){
   .thesis .container{
     padding-bottom: 1.5rem;
   }
@@ -415,7 +415,7 @@ footer a:hover{
   color: hsl(266, 29%, 44%);
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 980px){
   footer{
     color: hsl(60, 2%, 30%);
     padding: 1rem 1.5rem;
@@ -425,13 +425,13 @@ footer a:hover{
 
 /* General screening rules*/
 
-@media only screen and (min-width: 900px){
+@media only screen and (min-width: 980px){
   .mobile{
     display: none;
   }
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 980px){
   .desktop{
     display: none;
   }
