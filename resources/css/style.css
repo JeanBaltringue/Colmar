@@ -32,11 +32,11 @@ a{
 
 /* Section general styles */
 
-main .section:nth-child(odd){
+main section:nth-child(odd){
   background-color: hsl(64, 9%, 90%);
 }
 
-.section{
+section{
   width: 100%;
   display: flex;
   align-items: center;
@@ -116,7 +116,7 @@ header img{
   height: 100%;
 }
 
-    /*---Header desktop---*/
+    /*---Header mobile styles---*/
 .logo{
   display: flex;
   align-items:center;
@@ -143,7 +143,7 @@ header .desktop a:active{
   color: hsl(349, 67%, 46%);
 }
 
-    /*---Header mobile---*/
+    /*---Header mobile styles---*/
 
 header .mobile{
   padding: 0.5rem 1.5rem 0 1.5rem;
@@ -151,7 +151,7 @@ header .mobile{
 
 /* Banner */
 
-    /*---Banner desktop---*/
+    /*---Banner desktop styles---*/
 
 .banner .container-right{
   justify-content: center;
@@ -173,7 +173,7 @@ header .mobile{
   color: hsl(349, 67%, 46%);
 }
 
-    /*---Banner mobile---*/
+    /*---Banner mobile styles---*/
 
 @media only screen and (max-width: 740px)  {
   .banner .container{
@@ -209,7 +209,7 @@ header .mobile{
   color: hsl(266, 29%, 44%);
 }
 
-    /*---Main info desktop---*/
+    /*---Main info desktop styles---*/
 
 .main-info .container-left h1{
   margin: 2rem 0 1.5rem 0;
@@ -234,7 +234,7 @@ header .mobile{
   }
 }
 
-    /*---Main info mobile---*/
+    /*---Main info mobile styles---*/
 
 @media only screen and (max-width: 740px){
   .main-info .container{
@@ -281,7 +281,7 @@ header .mobile{
   align-items: center;
 }
 
-    /*---Start learning desktop--- */
+    /*---Start learning desktop styles--- */
 
 .box-line{
   display: flex;
@@ -317,7 +317,7 @@ header .mobile{
   padding: 0.5rem 0;
 }
 
-    /*---Start learning mobile---*/
+    /*---Start learning mobile styles---*/
 
 .learning-box .mobile{
   width: 100%;
@@ -358,7 +358,7 @@ video{
   width: 100%;
 }
 
-    /*---Thesis desktop---*/
+    /*---Thesis desktop styles---*/
 
 .sub-container{
   width:100%;
@@ -378,7 +378,7 @@ video{
 background-color: hsl(64, 9%, 90%);
 }
 
-    /*---Thesis mobile---*/
+    /*---Thesis mobile styles---*/
 
 @media only screen and (max-width: 740px){
   .thesis .container{
@@ -423,7 +423,7 @@ footer a:hover{
   }
 }
 
-/* General screening rules*/
+/* General media queries*/
 
 @media only screen and (min-width: 740px) and (max-width: 980px){
   h1{
